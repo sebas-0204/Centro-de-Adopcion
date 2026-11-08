@@ -27,6 +27,10 @@ public abstract class Animal implements Serializable {
         this.descripcion = descripcion;
     }
 
+    private static final long serialVersionUID = 1L;
+    private final String id = java.util.UUID.randomUUID().toString();
+
+    public String getId() { return id; }
     
     public abstract void mostrarDescripcionCuidados();
 
